@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Code Commit Process | vuepress-simple-sidebar</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/vuepress-simple-sidebar/assets/css/0.styles.7bb1683b.css" as="style"><link rel="preload" href="/vuepress-simple-sidebar/assets/js/app.472de899.js" as="script"><link rel="preload" href="/vuepress-simple-sidebar/assets/js/2.a87429f3.js" as="script"><link rel="preload" href="/vuepress-simple-sidebar/assets/js/21.c9e64543.js" as="script"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/10.60441c1b.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/11.e5e0900a.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/12.90c08af9.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/13.e2606cfe.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/14.22ec2556.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/15.cf215300.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/16.fccc6c42.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/17.83f5ba76.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/18.8fe1d975.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/19.cdd81a2f.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/20.d6a2e5ef.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/22.424a0392.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/23.78e59d8d.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/24.345f8ce1.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/25.ff7d6582.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/26.c7e5e7b6.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/27.35ba6f60.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/28.9acbee04.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/3.1b9b5c76.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/4.7d5f245c.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/5.d029c308.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/6.6a20be92.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/7.d914af7d.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/8.1991946f.js"><link rel="prefetch" href="/vuepress-simple-sidebar/assets/js/9.19aa7088.js">
+    <link rel="stylesheet" href="/vuepress-simple-sidebar/assets/css/0.styles.7bb1683b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-simple-sidebar/" class="home-link router-link-active"><!----> <span class="site-name">vuepress-simple-sidebar</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Development</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-simple-sidebar/development/" aria-current="page" class="sidebar-link">Overview</a></li><li><a href="/vuepress-simple-sidebar/development/1-testing.html" class="sidebar-link">Automated Testing</a></li><li><a href="/vuepress-simple-sidebar/development/2-commit.html" aria-current="page" class="active sidebar-link">Code Commit Process</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>Docs</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="code-commit-process"><a href="#code-commit-process" class="header-anchor">#</a> Code Commit Process</h1> <ol><li><p>Tell Jest to watch for file changes and run the unit tests automatically</p> <div class="language- extra-class"><pre><code> npm run test:unit -- --watch
+</code></pre></div><p>Alternatively you can continuously run all tests, but integration tests
+are slower and hence it might be more productive to run them once in a while,
+but surely before commit.</p></li> <li><p>Perform the code changes and ensure a test has been written to cover your new code</p> <p><em>Ensure code coverage stays high at all times by adding more specific tests</em></p></li> <li><p>Do any code formatting neccesary (TODO: replace with linter)</p></li> <li><p>Run all tests if not already, including integration</p> <div class="language- extra-class"><pre><code> npm run test
+</code></pre></div></li> <li><p>Write the related documentation. If its a big change, a decision in the format
+of <code>adr</code> will be required.</p></li> <li><p>Commit and push your code changes</p> <div class="language- extra-class"><pre><code> git add .
+ git commit -m &quot;Issue number / other info&quot;
+ git push
+</code></pre></div></li> <li><p>Publish the package</p> <div class="language- extra-class"><pre><code> npm run publish
+</code></pre></div></li> <li><p>Create the release notes</p></li> <li><p>Deploy the documentation</p> <div class="language- extra-class"><pre><code> npm run docs:deploy
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-simple-sidebar/development/1-testing.html" class="prev">
+        Automated Testing
+      </a></span> <span class="next"><a href="/vuepress-simple-sidebar/development/docs/">
+        Overview for docs specific
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vuepress-simple-sidebar/assets/js/app.472de899.js" defer></script><script src="/vuepress-simple-sidebar/assets/js/2.a87429f3.js" defer></script><script src="/vuepress-simple-sidebar/assets/js/21.c9e64543.js" defer></script>
+  </body>
+</html>
