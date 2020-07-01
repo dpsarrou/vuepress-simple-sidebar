@@ -1,0 +1,67 @@
+{
+  "name": "vuepress-simple-sidebar",
+  "version": "1.0.0",
+  "description": "A simple sidebar that automatically generates level 1 links of your documentation files",
+  "main": "dist/plugin.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "tsc",
+  "directories": {
+    "demodocs": "demodocs/",
+    "src": "src/",
+    "tests": "tests/"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "docs:dev": "npm run build && vuepress dev docs --debug",
+    "docs:build": "npm run build && vuepress build docs",
+    "test": "jest",
+    "test:unit": "jest unit",
+    "test:integration": "jest integration",
+    "test-watch": "jest unit --watchAll"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "vuepress plugin",
+    "vuepress-sidebar",
+    "vuepress-simple-sidebar",
+    "vuepress-auto-sidebar"
+  ],
+  "author": "Dimitrios Psarrou <dpsarrou@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.3",
+    "@types/node": "^14.0.14",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.5",
+    "vuepress": "^1.5.2"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/tests/"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "testRegex": "(/tests/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/coverage",
+      "<rootDir>/tests/out"
+    ],
+    "watchPathIgnorePatterns": [
+      "<rootDir>/tests/coverage",
+      "<rootDir>/tests/out"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/tests/out/coverage",
+    "bail": true
+  }
+}

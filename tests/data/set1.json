@@ -1,0 +1,376 @@
+{
+    "pages": [
+        {
+            "relativePath": "Readme.md",
+            "title": "Level0 Readme"
+        },
+        {
+            "relativePath": "level1/doc.md",
+            "title": "Level1 Document"
+        },
+        {
+            "relativePath": "level1/Readme.md",
+            "title": "Level1 Readme"
+        },
+        {
+            "relativePath": "level1/no_title_doc.md"
+        },
+        {
+            "relativePath": "level1/level2/doc.md",
+            "title": "Level2 Document"
+        },
+        {
+            "relativePath": "level1/level2/level3/Readme.md",
+            "title": "Level3 Readme"
+        },
+        {
+            "relativePath": "level1/level2/level3/level4/doc.md",
+            "title": "Level4 Document"
+        },
+        {
+            "relativePath": "dir2level1/level2/level3/level4/doc.md",
+            "title": "Level4 Document"
+        }
+    ],
+    "tree": [
+        {
+            "path": "/",
+            "value": {
+                "path": "/",
+                "title": "Level0 Readme"
+            },
+            "children": [
+                {
+                    "path": "/dir2level1",
+                    "children": [
+                        {
+                            "path": "/dir2level1/level2",
+                            "children": [
+                                {
+                                    "path": "/dir2level1/level2/level3",
+                                    "children": [
+                                        {
+                                            "path": "/dir2level1/level2/level3/level4",
+                                            "children": [
+                                                {
+                                                    "path": "/dir2level1/level2/level3/level4/doc",
+                                                    "value": {
+                                                        "path": "/dir2level1/level2/level3/level4/doc",
+                                                        "title": "Level4 Document"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "path": "/level1",
+                    "value": {
+                        "path": "/level1/",
+                        "title": "Level1 Readme"
+                    },
+                    "children": [
+                        {
+                            "path": "/level1/doc",
+                            "value": {
+                                "path": "/level1/doc",
+                                "title": "Level1 Document"
+                            },
+                            "children": []
+                        },
+                        {
+                            "path": "/level1/level2",
+                            "children": [
+                                {
+                                    "path": "/level1/level2/doc",
+                                    "value": {
+                                        "path": "/level1/level2/doc",
+                                        "title": "Level2 Document"
+                                    },
+                                    "children": []
+                                },
+                                {
+                                    "path": "/level1/level2/level3",
+                                    "value": {
+                                        "path": "/level1/level2/level3/",
+                                        "title": "Level3 Readme"
+                                    },
+                                    "children": [
+                                        {
+                                            "path": "/level1/level2/level3/level4",
+                                            "children": [
+                                                {
+                                                    "path": "/level1/level2/level3/level4/doc",
+                                                    "value": {
+                                                        "path": "/level1/level2/level3/level4/doc",
+                                                        "title": "Level4 Document"
+                                                    },
+                                                    "children": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "path": "/level1/no_title_doc",
+                            "value": {
+                                "path": "/level1/no_title_doc"
+                            },
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "groups": {
+        "/level1/level2/level3/level4/": [
+            {
+                "_id": "/level1/level2/level3/level4",
+                "title": "Level4",
+                "children": [
+                    {
+                        "_id": "/level1/level2/level3/level4/doc",
+                        "path": "/level1/level2/level3/level4/doc",
+                        "title": "Level4 Document",
+                        "children": []
+                    }
+                ]
+            }
+        ],
+        "/level1/level2/level3/": [
+            {
+                "_id": "/level1/level2/level3/",
+                "title": "Level3",
+                "children": [
+                    {
+                        "_id": "/level1/level2/level3/",
+                        "path": "/level1/level2/level3/",
+                        "title": "Level3 Readme",
+                        "children": []
+                    },
+                    {
+                        "_id": "/level1/level2/level3/level4",
+                        "title": "Level4",
+                        "children": [
+                            {
+                                "_id": "/level1/level2/level3/level4/doc",
+                                "path": "/level1/level2/level3/level4/doc",
+                                "title": "Level4 Document",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "/level1/level2/": [
+            {
+                "_id": "/level1/level2",
+                "title": "Level2",
+                "children": [
+                    {
+                        "_id": "/level1/level2/doc",
+                        "path": "/level1/level2/doc",
+                        "title": "Level2 Document",
+                        "children": []
+                    },
+                    {
+                        "_id": "/level1/level2/level3/",
+                        "title": "Level3",
+                        "children": [
+                            {
+                                "_id": "/level1/level2/level3/",
+                                "path": "/level1/level2/level3/",
+                                "title": "Level3 Readme",
+                                "children": []
+                            },
+                            {
+                                "_id": "/level1/level2/level3/level4",
+                                "title": "Level4",
+                                "children": [
+                                    {
+                                        "_id": "/level1/level2/level3/level4/doc",
+                                        "path": "/level1/level2/level3/level4/doc",
+                                        "title": "Level4 Document",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "/level1/": [
+            {
+                "_id": "/level1/",
+                "title": "Level1",
+                "children": [
+                    {
+                        "_id": "/level1/",
+                        "path": "/level1/",
+                        "title": "Level1 Readme",
+                        "children": []
+                    },
+                    {
+                        "_id": "/level1/doc",
+                        "path": "/level1/doc",
+                        "title": "Level1 Document",
+                        "children": []
+                    },
+                    {
+                        "_id": "/level1/level2",
+                        "title": "Level2",
+                        "children": [
+                            {
+                                "_id": "/level1/level2/doc",
+                                "path": "/level1/level2/doc",
+                                "title": "Level2 Document",
+                                "children": []
+                            },
+                            {
+                                "_id": "/level1/level2/level3/",
+                                "title": "Level3",
+                                "children": [
+                                    {
+                                        "_id": "/level1/level2/level3/",
+                                        "path": "/level1/level2/level3/",
+                                        "title": "Level3 Readme",
+                                        "children": []
+                                    },
+                                    {
+                                        "_id": "/level1/level2/level3/level4",
+                                        "title": "Level4",
+                                        "children": [
+                                            {
+                                                "_id": "/level1/level2/level3/level4/doc",
+                                                "path": "/level1/level2/level3/level4/doc",
+                                                "title": "Level4 Document",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "_id": "/level1/no_title_doc",
+                        "path": "/level1/no_title_doc",
+                        "children": []
+                    }
+                ]
+            }
+        ],
+        "/dir2level1/level2/level3/level4/": [
+            {
+                "_id": "/dir2level1/level2/level3/level4",
+                "title": "Level4",
+                "children": [
+                    {
+                        "_id": "/dir2level1/level2/level3/level4/doc",
+                        "path": "/dir2level1/level2/level3/level4/doc",
+                        "title": "Level4 Document",
+                        "children": []
+                    }
+                ]
+            }
+        ],
+        "/dir2level1/level2/level3/": [
+            {
+                "_id": "/dir2level1/level2/level3",
+                "title": "Level3",
+                "children": [
+                    {
+                        "_id": "/dir2level1/level2/level3/level4",
+                        "title": "Level4",
+                        "children": [
+                            {
+                                "_id": "/dir2level1/level2/level3/level4/doc",
+                                "path": "/dir2level1/level2/level3/level4/doc",
+                                "title": "Level4 Document",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "/dir2level1/level2/": [
+            {
+                "_id": "/dir2level1/level2",
+                "title": "Level2",
+                "children": [
+                    {
+                        "_id": "/dir2level1/level2/level3",
+                        "title": "Level3",
+                        "children": [
+                            {
+                                "_id": "/dir2level1/level2/level3/level4",
+                                "title": "Level4",
+                                "children": [
+                                    {
+                                        "_id": "/dir2level1/level2/level3/level4/doc",
+                                        "path": "/dir2level1/level2/level3/level4/doc",
+                                        "title": "Level4 Document",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "/dir2level1/": [
+            {
+                "_id": "/dir2level1",
+                "title": "Dir2level1",
+                "children": [
+                    {
+                        "_id": "/dir2level1/level2",
+                        "title": "Level2",
+                        "children": [
+                            {
+                                "_id": "/dir2level1/level2/level3",
+                                "title": "Level3",
+                                "children": [
+                                    {
+                                        "_id": "/dir2level1/level2/level3/level4",
+                                        "title": "Level4",
+                                        "children": [
+                                            {
+                                                "_id": "/dir2level1/level2/level3/level4/doc",
+                                                "path": "/dir2level1/level2/level3/level4/doc",
+                                                "title": "Level4 Document",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "/": [
+            "/",
+            "/dir2level1/level2/level3/level4/doc",
+            "/level1/",
+            "/level1/doc",
+            "/level1/level2/doc",
+            "/level1/level2/level3/",
+            "/level1/level2/level3/level4/doc",
+            "/level1/no_title_doc"
+        ]
+    }
+}
