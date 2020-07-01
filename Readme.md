@@ -26,3 +26,11 @@ In your `.vuepress/config.js` add the plugin to the plugins property as:
         ...
         'vuepress-simple-sidebar',
     ]
+
+## Development
+
+Please find the development documentation in the [docs](./docs/development) folder.
+
+## Contributing
+
+Please create a ticket if you encounter a bug.

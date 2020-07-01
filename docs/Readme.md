@@ -11,6 +11,8 @@ features:
   details: Find out how to include and use the plugin in your Vuepress installation
 - title: Demo Directory
   details: Checkout a demo directory with nested documents to get an idea of how the plugin works
+- title: Development Documentation
+  details: Docs for developers, for when you want to contribute or be involved
 - title: Architecture Decision Records
   details: The most important architecture decisions, their context and their consequences
 ---
@@ -19,4 +21,5 @@ features:
 
 - [Usage Documentation](./usage)
 - [Demo Directory](./demo)
+- [Development Documentation](./development)
 - [Architecture Decision Records](./adr)

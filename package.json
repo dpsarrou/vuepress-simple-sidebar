@@ -1,24 +1,26 @@
 {
   "name": "vuepress-simple-sidebar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple sidebar that automatically generates level 1 links of your documentation files",
   "main": "dist/plugin.js",
   "types": "dist/index.d.ts",
   "prepublish": "tsc",
   "directories": {
-    "demodocs": "demodocs/",
+    "docs": "docs/",
     "src": "src/",
     "tests": "tests/"
   },
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "docs:dev": "npm run build && vuepress dev docs --debug",
-    "docs:build": "npm run build && vuepress build docs",
     "test": "jest",
     "test:unit": "jest unit",
     "test:integration": "jest integration",
-    "test-watch": "jest unit --watchAll"
+    "docs:dev": "npm run build && vuepress dev docs --debug",
+    "docs:build": "npm run build && npm run test && vuepress build docs",
+    "docs:deploy": "npm run docs:build && npm run docs:deploy-push",
+    "docs:deploy-push": "cd docs/.vuepress/dist && git init && git add -A && git commit -m 'deploy' && git push -f git@github.com:dpsarrou/vuepress-simple-sidebar.git master:gh-pages && cd -",
+    "publish": "np"
   },
   "keywords": [
     "vuepress",
@@ -30,13 +32,15 @@
   ],
   "author": "Dimitrios Psarrou <dpsarrou@gmail.com>",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^26.0.3",
     "@types/node": "^14.0.14",
     "jest": "^26.1.0",
     "ts-jest": "^26.1.1",
     "typescript": "^3.9.5",
-    "vuepress": "^1.5.2"
+    "vuepress": "^1.5.2",
+    "np": "^6.2.5"
   },
   "jest": {
     "roots": [
