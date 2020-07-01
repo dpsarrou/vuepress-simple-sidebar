@@ -1,6 +1,6 @@
 {
   "name": "vuepress-simple-sidebar",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A simple sidebar that automatically generates level 1 links of your documentation files",
   "main": "dist/plugin.js",
   "types": "dist/index.d.ts",
